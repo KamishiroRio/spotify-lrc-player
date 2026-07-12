@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Spotify 自訂歌詞播放器",
+  "version": "1.0",
+  "description": "手動匯入 LRC 檔案來同步顯示 Spotify 歌詞",
+  "content_scripts": [
+    {
+      "matches": ["https://open.spotify.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

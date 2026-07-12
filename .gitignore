@@ -1,0 +1,16 @@
+# 環境變數 (千萬別上傳！)
+.env
+
+# Python 編譯與環境
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# 編輯器隱藏檔
+.vscode/
+.idea/
+.DS_Store
+
+# Spicetify 暫存檔
+.spicetify/
