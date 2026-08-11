@@ -1,5 +1,19 @@
 # 🎧 Kamishiro Spotify LRC Player
 
+```mermaid
+flowchart LR
+    A([User Plays Track]) --> B[Spicetify Event Listener\nDetect Track Change]
+    B --> C{Spotify Native\nLyrics Exist?}
+    
+    C -- Yes --> D[Render Native UI]
+    C -- No --> E[Fetch from Custom\nspotify-lyrics-api]
+    
+    E -- Success (200 OK) --> F[Inject Custom LRC UI]
+    E -- Fail (404) --> G[Render Fallback UI]
+    
+    style B fill:#1DB954,color:#fff,stroke:#191414,stroke-width:2px
+    style F fill:#1DB954,color:#fff,stroke:#fff,stroke-width:2px
+```
 A powerful, highly integrated custom lyrics player for Spotify. It bridges the gap between official limitations and a premium, synchronized-lyrics experience. 
 
 ## ✨ Features
