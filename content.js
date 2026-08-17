@@ -1,3 +1,6 @@
+// Change this to your local or deployed API URL
+const API_BASE_URL = "http://127.0.0.1:8000/api/lyrics";
+
 let lyrics = [];
 let lyricElements = []; 
 let syncTimer = null;
@@ -399,7 +402,7 @@ function initTrackWatcher() {
 
             console.log(`🎵 發現新歌曲！準備向後端討救兵: ${currentTrackInfo}`);
             
-            fetch(`https://spotify-lyrics-api-e8a5.onrender.com/api/lyrics?q=${encodeURIComponent(currentTrackInfo)}`)
+            fetch(`${API_BASE_URL}?q=${encodeURIComponent(currentTrackInfo)}`)
                 .then(response => {
                     if (!response.ok) throw new Error('找不到歌詞');
                     return response.json();

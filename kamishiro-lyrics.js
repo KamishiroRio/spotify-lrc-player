@@ -5,6 +5,8 @@
     }
     
     console.log("🚀 Spicetify API 載入成功");
+    // Change this to your local or deployed API URL
+    const API_BASE_URL = "http://127.0.0.1:8000/api/lyrics";
 
     let lyrics = [];
     let lyricElements = [];
@@ -330,7 +332,7 @@
         const btn = document.getElementById('kamishiro-lyric-toggle');
         if (btn) btn.style.display = 'none';
 
-        fetch(`https://spotify-lyrics-api-e8a5.onrender.com/api/lyrics?q=${encodeURIComponent(currentTrackInfo)}`)
+        fetch(`${API_BASE_URL}?q=${encodeURIComponent(currentTrackInfo)}`)
             .then(response => {
                 if (!response.ok) throw new Error('找不到歌詞');
                 return response.json();
