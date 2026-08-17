@@ -4,7 +4,7 @@
         return;
     }
     
-    console.log("🚀 Spicetify API 載入成功，神代歌詞桌面版啟動！");
+    console.log("🚀 Spicetify API 載入成功");
 
     let lyrics = [];
     let lyricElements = [];
