@@ -16,6 +16,9 @@ flowchart LR
 ```
 A powerful, highly integrated custom lyrics player for Spotify. It bridges the gap between official limitations and a premium, synchronized-lyrics experience. 
 
+## Demostration (Using Spicetify)
+![AutoLRC Demo](demo/demo1.gif)
+
 ## ✨ Features
 * **Seamless UI Integration**: Natively injects a custom `🎵 LRC` toggle button into the Spotify UI.
 * **Dynamic Gradient Theme**: Automatically extracts the dominant color from your album art to generate an immersive, self-adapting gradient background.
